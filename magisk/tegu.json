@@ -1,7 +1,7 @@
 {
   "version": 2,
   "full": {
-    "location_ota": "https://github.com/Minion3665/rooted-graphene-ota/releases/download/2026020601/tegu-2026020601-0b40ae2-magisk-v30.6.zip",
-    "location_csig": "https://github.com/Minion3665/rooted-graphene-ota/releases/download/2026020601/tegu-2026020601-0b40ae2-magisk-v30.6.zip.csig"
+    "location_ota": "https://github.com/Minion3665/rooted-graphene-ota/releases/download/2026021201/tegu-2026021201-0b40ae2-magisk-v30.6.zip",
+    "location_csig": "https://github.com/Minion3665/rooted-graphene-ota/releases/download/2026021201/tegu-2026021201-0b40ae2-magisk-v30.6.zip.csig"
   }
 }
