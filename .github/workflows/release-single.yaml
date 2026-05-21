@@ -63,6 +63,13 @@ jobs:
         with:
           path: ota # Corresponds to PAGES_REPO_FOLDER
           fetch-depth: 0 # Allow for switching to github-pages branch
+      - name: Restore cached APKs
+        id: cache-apk-restore
+        uses: actions/cache/restore@v5
+        with:
+          path: |
+            system-apps
+          key: ${{ github.event.inputs.device-id || inputs.device-id || 'shiba' }}-system-apps
       - name: Set inputs
         # Empty means, use version defined in rooted-ota.sh
         # Note the difference between github.event.inputs (workflow_dispatch) and inputs (workflow_call)
@@ -105,3 +112,10 @@ jobs:
           else
             DEBUG=1 bash -c '. rooted-ota.sh && createAndReleaseRootedOta'
           fi
+      - name: Save APKs
+        id: cache-apk-save
+        uses: actions/cache/save@v5
+        with:
+          path: |
+            system-apps
+          key: ${{ github.event.inputs.device-id || inputs.device-id || 'shiba' }}-system-apps
